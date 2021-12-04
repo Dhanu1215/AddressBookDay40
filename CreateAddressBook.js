@@ -111,7 +111,6 @@ for(let i=0;i<addressBookArr.length;i++){
     console.log(addressBookArr[i])
 }
 //Find contact by name
-let count = 0;
 let findContact = addressBookArr.filter(contact => contact.firstName  == "Ovi");
 console.log(findContact[0]);
 
@@ -119,3 +118,10 @@ console.log(findContact[0]);
 let deleteContact = findContact.slice(0,0);
 console.log(deleteContact);
 console.log("Contact deleted");
+
+//Get number of contacts in address book
+let count = 0;
+    for(let i=0;i<addressBookArr.length;i++){
+            count++;
+    }
+console.log("Number of contacts in address book is: "+count);
