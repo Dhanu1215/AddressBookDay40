@@ -81,10 +81,10 @@ class AddressBook{
         else throw "Incorrect Zip"
     }
     get phoneNo(){ return this._phoneNo}
-    set phoneNo(phoneNo){
+    set phoneNo(mobnum){
         let regex = RegExp('[0-9]{2}\\s[0-9]{10}')
-        if(regex.test(phoneNo))
-            this._phoneNo = phoneNo
+        if(regex.test(mobnum))
+            this._mobnum = mobnum
         else throw "Incorrect Phone Number"
     }
     get email(){ return this._email}
