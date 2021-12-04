@@ -99,8 +99,10 @@ let addressBookArr = new Array()
 try{
 let contact1 = new AddressBook("Dhanashree","Hakke","sangli","kavalapur","maharashtra",416416,1234567890,"dhanashreehakke7@gmail.com")
 let contact2 = new AddressBook("Sampada","Hakke","sangli","kavalapur","maharashtra",416416,1234567890,"sampadahakke7@gmail.com")
+let contact3 = new AddressBook("Ovi","Yamgar","sangli","kavalapur","maharashtra",416416,1234567890,"ovoyamgar7@gmail.com")
 addressBookArr.push(contact1);
 addressBookArr.push(contact2);
+addressBookArr.push(contact3);
 }
 catch(e){
     console.log(e)
@@ -109,7 +111,11 @@ for(let i=0;i<addressBookArr.length;i++){
     console.log(addressBookArr[i])
 }
 //Find contact by name
-let findContact = addressBookArr.filter(contact => contact.firstName  == "Sampada");
-for(let i=0;i<addressBookArr.length;i++){
-console.log(findContact[i]);
-}
+let count = 0;
+let findContact = addressBookArr.filter(contact => contact.firstName  == "Ovi");
+console.log(findContact[0]);
+
+//Find person and delete it from array
+let deleteContact = findContact.slice(0,0);
+console.log(deleteContact);
+console.log("Contact deleted");
