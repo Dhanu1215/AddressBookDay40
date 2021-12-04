@@ -94,10 +94,17 @@ class AddressBook{
     }
 
 }
+
+let addressBookArr = new Array()
 try{
-let addressbook = new AddressBook("dhanashree","Hakke","sangli","kavalapur","maharashtra",416416,1234567890,"dhanashreehakke7@gmail.com")
-console.log(addressbook.toString());
+let contact1 = new AddressBook("dhanashree","Hakke","sangli","kavalapur","maharashtra",416416,1234567890,"dhanashreehakke7@gmail.com")
+let contact2 = new AddressBook("sampada","Hakke","sangli","kavalapur","maharashtra",416416,1234567890,"sampadahakke7@gmail.com")
+addressBookArr.push(contact1);
+addressBookArr.push(contact2);
 }
 catch(e){
     console.log(e)
+}
+for(let i=0;i<addressBookArr.length;i++){
+    console.log(addressBookArr[i])
 }
