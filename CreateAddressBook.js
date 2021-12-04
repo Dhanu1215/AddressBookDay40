@@ -1,3 +1,5 @@
+const PromptSync = require('prompt-sync');
+
 console.log("Welcome to address book program");
 // UC1-Create Address book contact
 class AddressBook{
@@ -94,6 +96,21 @@ class AddressBook{
     }
 
 }
+//Find contact
+const prompt = require('prompt-sync')();
+
+function findContact(fname, lname) {
+    let contactToEdit;
+    for (let i = 0; i < addressBookArr.length; i++) {
+        if (addressBookArr[i].firstName == fname && addressBookArr[i].lastName === lname)
+             contactToEdit = addressBookArr[i];
+    }
+    
+}
+
+let param1 = prompt("Enter the First Name:  ")
+let param2 = prompt("Enter the Last Name:  ")
+findContact(param1, param2);
 
 let addressBookArr = new Array()
 try{
