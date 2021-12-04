@@ -1,5 +1,3 @@
-const PromptSync = require('prompt-sync');
-
 console.log("Welcome to address book program");
 // UC1-Create Address book contact
 class AddressBook{
@@ -96,26 +94,11 @@ class AddressBook{
     }
 
 }
-//Find contact
-const prompt = require('prompt-sync')();
-
-function findContact(fname, lname) {
-    let contactToEdit;
-    for (let i = 0; i < addressBookArr.length; i++) {
-        if (addressBookArr[i].firstName == fname && addressBookArr[i].lastName === lname)
-             contactToEdit = addressBookArr[i];
-    }
-    
-}
-
-let param1 = prompt("Enter the First Name:  ")
-let param2 = prompt("Enter the Last Name:  ")
-findContact(param1, param2);
 
 let addressBookArr = new Array()
 try{
-let contact1 = new AddressBook("dhanashree","Hakke","sangli","kavalapur","maharashtra",416416,1234567890,"dhanashreehakke7@gmail.com")
-let contact2 = new AddressBook("sampada","Hakke","sangli","kavalapur","maharashtra",416416,1234567890,"sampadahakke7@gmail.com")
+let contact1 = new AddressBook("Dhanashree","Hakke","sangli","kavalapur","maharashtra",416416,1234567890,"dhanashreehakke7@gmail.com")
+let contact2 = new AddressBook("Sampada","Hakke","sangli","kavalapur","maharashtra",416416,1234567890,"sampadahakke7@gmail.com")
 addressBookArr.push(contact1);
 addressBookArr.push(contact2);
 }
@@ -124,4 +107,9 @@ catch(e){
 }
 for(let i=0;i<addressBookArr.length;i++){
     console.log(addressBookArr[i])
+}
+//Find contact by name
+let findContact = addressBookArr.filter(contact => contact.firstName  == "Sampada");
+for(let i=0;i<addressBookArr.length;i++){
+console.log(findContact[i]);
 }
